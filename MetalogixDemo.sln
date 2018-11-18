@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalogixDemoClient", "Meta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalogixDemoService", "MetalogixDemoService\MetalogixDemoService.csproj", "{EBB1BF55-8F3D-43F6-82BE-A92620CF8018}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalogixData", "MetalogixData\MetalogixData.csproj", "{00EFA5EF-7A8F-43FE-AD64-B6F480B17102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalogixInterfaces", "MetalogixInterfaces\MetalogixInterfaces.csproj", "{0703166F-E83F-4158-9052-652D97B6A436}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{EBB1BF55-8F3D-43F6-82BE-A92620CF8018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBB1BF55-8F3D-43F6-82BE-A92620CF8018}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBB1BF55-8F3D-43F6-82BE-A92620CF8018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00EFA5EF-7A8F-43FE-AD64-B6F480B17102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00EFA5EF-7A8F-43FE-AD64-B6F480B17102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00EFA5EF-7A8F-43FE-AD64-B6F480B17102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00EFA5EF-7A8F-43FE-AD64-B6F480B17102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0703166F-E83F-4158-9052-652D97B6A436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0703166F-E83F-4158-9052-652D97B6A436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0703166F-E83F-4158-9052-652D97B6A436}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0703166F-E83F-4158-9052-652D97B6A436}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

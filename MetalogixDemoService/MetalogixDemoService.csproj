@@ -84,6 +84,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MetalogixData\MetalogixData.csproj">
+      <Project>{00efa5ef-7a8f-43fe-ad64-b6f480b17102}</Project>
+      <Name>MetalogixData</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MetalogixDb\MetalogixDb.sqlproj">
       <Project>{93f94436-c398-42d4-95b5-17ce0ab8729e}</Project>
       <Name>MetalogixDb</Name>

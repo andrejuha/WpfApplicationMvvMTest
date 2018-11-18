@@ -57,10 +57,17 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Company.sql" />
     <Build Include="Company_Type.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CompanyUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CompanySelect.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CompanyInsert.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CompanyFilter.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CompanyDelete.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="MetalogixDb.refactorlog" />
