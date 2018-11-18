@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="8a4b9a95-8e74-45a2-94b2-651a8c4fcddf" ChangeDateTime="11/17/2018 11:43:10">
+    <Property Name="ElementName" Value="[dbo].[METALOGIX].[CountryCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[METALOGIX]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Country_Code" />
+  </Operation>
+</Operations>
