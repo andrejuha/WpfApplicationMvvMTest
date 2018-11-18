@@ -65,4 +65,7 @@
   <ItemGroup>
     <RefactorLog Include="MetalogixDb.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="MetalogixDb.publish.xml" />
+  </ItemGroup>
 </Project>
