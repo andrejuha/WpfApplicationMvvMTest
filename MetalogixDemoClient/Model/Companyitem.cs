@@ -2,6 +2,10 @@
 {
     public class CompanyItem
     {
+        public CompanyItem()
+        {
+
+        }
         public CompanyItem(int ID, string Name, int CountryCode, CompanyTypeEnum CompanyType)
         {
             this.Id = ID;
@@ -10,11 +14,11 @@
             this.CompanyTypeEnum = CompanyType;
         }
 
-        public int Id { get; private set; }
+        public int Id { get;  set; }
 
-        public string  Name { get; private set; }
+        public string  Name { get;  set; }
 
-        public int ContryCode { get; private set; }
+        public int ContryCode { get;  set; }
 
         public CompanyTypeEnum CompanyTypeEnum { get; set; }
 
@@ -22,6 +26,8 @@
 
 
 }
+
+
 
     public enum CompanyTypeEnum
     {

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0476dccb-baa5-440f-a045-73ba61b0560a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>true</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57923/MetalogixDemoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MetalogixDemoService.xsd" MetadataType="Schema" ID="05544151-ea1d-4208-8910-999d81d95fad" SourceId="1" SourceUrl="http://localhost:57923/MetalogixDemoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MetalogixDemoService.disco" MetadataType="Disco" ID="aa3cdfdb-8096-4b6b-be76-bad0801c924e" SourceId="1" SourceUrl="http://localhost:57923/MetalogixDemoService.svc?disco" />
+    <MetadataFile FileName="MetalogixDemoService1.xsd" MetadataType="Schema" ID="721bce6a-774b-4842-bfeb-fcc52b283713" SourceId="1" SourceUrl="http://localhost:57923/MetalogixDemoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MetalogixDemoService.wsdl" MetadataType="Wsdl" ID="0309ce20-32c9-455f-abb4-4216aff16802" SourceId="1" SourceUrl="http://localhost:57923/MetalogixDemoService.svc?wsdl" />
+    <MetadataFile FileName="MetalogixDemoService3.xsd" MetadataType="Schema" ID="8e3e8544-0c58-462b-b52b-254b885b9460" SourceId="1" SourceUrl="http://localhost:57923/MetalogixDemoService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MetalogixDemoService2.xsd" MetadataType="Schema" ID="715ac492-8093-43df-8bd1-f2ba13455def" SourceId="1" SourceUrl="http://localhost:57923/MetalogixDemoService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

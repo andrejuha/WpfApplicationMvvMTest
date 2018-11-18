@@ -80,9 +80,15 @@
     <Compile Include="Design\DesignDataService.cs" />
     <Compile Include="Model\CompanyItem.cs" />
     <Compile Include="Model\CompanyTypeItem.cs" />
+    <Compile Include="Model\Convert.cs" />
     <Compile Include="Model\DataService.cs" />
     <Compile Include="Model\IDataService.cs" />
     <Compile Include="Service References\MetalogixService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MetalogixWcfService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -130,7 +136,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Service References\MetalogixService\MetalogixDemoClient.MetalogixService.CompositeType.datasource">
+    <None Include="Service References\MetalogixService\MetalogixDemoClient.MetalogixService.CompanyWcfItem.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\MetalogixService\MetalogixDemoService.wsdl" />
@@ -143,6 +149,37 @@
     <None Include="Service References\MetalogixService\MetalogixDemoService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\MetalogixService\MetalogixDemoService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.AddCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.GetAllCompaniesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.GetCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.GetDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.UpdateCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoService.wsdl" />
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -152,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\MetalogixService\" />
+    <WCFMetadataStorage Include="Service References\MetalogixWcfService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\MetalogixService\MetalogixDemoService.disco" />
@@ -164,6 +202,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\MetalogixService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MetalogixWcfService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MetalogixWcfService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MetalogixWcfService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

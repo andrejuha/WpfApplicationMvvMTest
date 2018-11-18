@@ -3,7 +3,7 @@
 namespace MetalogixDemoService
 {
     [DataContract]
-    public class CompanyTypeItem
+    public class CompanyWcfTypeItem
     {
         [DataMember]
         public string Name { get; set; }

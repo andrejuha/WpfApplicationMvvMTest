@@ -6,14 +6,35 @@ namespace MetalogixDemoClient.Model
 {
     public class DataService : IDataService
     {
-        public Task<string> AddCompany(CompanyItem company)
+        MetalogixDemoClient.MetalogixWcfService.MetalogixDemoServiceClient GmetalogixDemoServiceClient;
+
+        public DataService(MetalogixDemoClient.MetalogixWcfService.IMetalogixDemoService MetalogixDemoService)
         {
-            throw new NotImplementedException();
+            //GmetalogixDemoServiceClient = MetalogixDemoService;
+        }
+        public DataService()
+        {
+            GmetalogixDemoServiceClient = new MetalogixWcfService.MetalogixDemoServiceClient();
+        }
+
+        public  Task<string> AddCompany(CompanyItem company)
+        {
+            MetalogixWcfService.AddCompanyRequest request = new MetalogixWcfService.AddCompanyRequest(company.ConvertCompanyItemToWcf());
+
+            MetalogixWcfService.AddCompanyResponse response = GmetalogixDemoServiceClient.AddCompany(request);
+             return Task.FromResult(response.AddCompanyResult);
+         
+            //GmetalogixDemoServiceClient. await  GmetalogixDemoServiceClient.AddCompanyAsync()
+            
         }
 
         public Task<IEnumerable<CompanyItem>> GetAllCompanies()
         {
-            throw new NotImplementedException();
+            MetalogixWcfService.GetAllCompaniesRequest request = new MetalogixWcfService.GetAllCompaniesRequest();
+
+            MetalogixWcfService.GetAllCompaniesResponse response = GmetalogixDemoServiceClient.GetAllCompanies(request);
+            return Task.FromResult(response.GetAllCompaniesResult.ConvertCompanyItemToWcf());
+            
         }
 
         public Task<CompanyItem> GetCompany(int Id, string companyName, string countryCode, string companyType)

@@ -13,29 +13,21 @@ namespace MetalogixDemoService
     [ServiceContract]
     public interface IMetalogixDemoService
     {
-
         [OperationContract]
-        string GetData(int value);
-
-
         void GetData(Action<CompanyWcfItem, Exception> callback);
-
+        [OperationContract]
         Task<IEnumerable<CompanyWcfItem>> GetAllCompanies();
-
+        [OperationContract]
         Task<string> UpdateCompany(CompanyWcfItem company);
-
+        [OperationContract]
         Task<string> AddCompany(CompanyWcfItem company);
 
         //Task<string> DeleteCompany(CompanyWcfItem company);
-
+        [OperationContract]
         Task<CompanyWcfItem> GetCompany(int Id,
         string companyName,
         string countryCode,
         string companyType);
-
-
-        [OperationContract]
-        CompanyWcfItem GetDataUsingDataContract(CompanyWcfItem composite);
 
         // TODO: Add your service operations here
     }
@@ -61,7 +53,7 @@ namespace MetalogixDemoService
         [DataMember]
         public int CompanyTypeEnum { get; set; }
         [DataMember]
-        public CompanyTypeItem CompanyTypeItem { get; set; }
+        public CompanyWcfTypeItem CompanyTypeItem { get; set; }
     }
 
     }
