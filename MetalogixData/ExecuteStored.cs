@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetalogixDemoClient.Model;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -9,25 +10,47 @@ namespace MetalogixData
 {
     public class ExecuteStored
     {
-        public void InsertCompany()
+        public void InsertCompany(string Name,int CountryCode)
         {
-            using (var db = new CompanyContext())
+            using (var db = new CompanyModel( ))
             {
-                var name = new SqlParameter("@name", txtDepartment.text.trim());
-        
-        //to get this to work, you will need to change your select inside dbo.insert_department to include name in the resultset
-                var department = db.Database.SqlQuery<Company>("dbo.insert_department @name", name).SingleOrDefault();
+                var name = new SqlParameter("@Name", Name);
+                var countryCode = new SqlParameter("@CountryCode", CountryCode);
 
-                //alternately, you can invoke SqlQuery on the DbSet itself:
-                //var department = db.Departments.SqlQuery("dbo.insert_department @name", name).SingleOrDefault();
-
-                int departmentID = department.DepartmentId;
+                var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Name, @Country_Code", name, countryCode).SingleOrDefault();
             }
 
         }
-        public void UpdateCompany()
+        public void UpdateCompany(CompanyItem company)
         {
+            using (var db = new CompanyModel())
+            {
+                var name = new SqlParameter("@Name", company.Name);
+                var countryCode = new SqlParameter("@CountryCode", company.ContryCode);
 
+                var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyUpdate @Name, @Country_Code", name, countryCode).SingleOrDefault();
+            }
+
+        }
+
+        public Company[] SelectCompany(int Id)
+        {
+            using (var db = new CompanyModel())
+            {
+
+                var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanySelect @Id", Id).SingleOrDefault();
+            }
+            return null;
+        }
+
+        public void DeleteCompany(int Id)
+        {
+            using (var db = new CompanyModel())
+            {
+                var name = new SqlParameter("@Id", Id);
+
+                var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Id", Id).SingleOrDefault();
+            }
 
         }
     }

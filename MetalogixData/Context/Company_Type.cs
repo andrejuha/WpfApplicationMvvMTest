@@ -8,7 +8,12 @@ namespace MetalogixData
 
     public partial class Company_Type
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Company_Type()
+        {
+            Companies = new HashSet<Company>();
+        }
+
         public int Id { get; set; }
 
         [StringLength(50)]
@@ -17,6 +22,7 @@ namespace MetalogixData
         [StringLength(50)]
         public string Description { get; set; }
 
-        public virtual Company Company { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Company> Companies { get; set; }
     }
 }
