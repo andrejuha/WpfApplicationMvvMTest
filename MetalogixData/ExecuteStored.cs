@@ -15,7 +15,7 @@ namespace MetalogixData
             using (var db = new CompanyModel( ))
             {
                 var name = new SqlParameter("@Name", Name);
-                var countryCode = new SqlParameter("@CountryCode", CountryCode);
+                var countryCode = new SqlParameter("@Country_Code", CountryCode);
 
                 var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Name, @Country_Code", name, countryCode).SingleOrDefault();
             }
@@ -26,21 +26,23 @@ namespace MetalogixData
             using (var db = new CompanyModel())
             {
                 var name = new SqlParameter("@Name", company.Name);
-                var countryCode = new SqlParameter("@CountryCode", company.ContryCode);
+                var countryCode = new SqlParameter("@Country_Code", company.ContryCode);
 
                 var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyUpdate @Name, @Country_Code", name, countryCode).SingleOrDefault();
             }
 
         }
 
-        public Company[] SelectCompany(int Id)
+        public CompanyView SelectCompany(int Id)
         {
+            CompanyView companies;
             using (var db = new CompanyModel())
             {
+                var paramId = new SqlParameter("@Id", Id);
+                 companies = db.Database.SqlQuery<CompanyView>("usp_CompanyViewSelect @Id", paramId).SingleOrDefault();
 
-                var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanySelect @Id", Id).SingleOrDefault();
             }
-            return null;
+            return companies;
         }
 
         public void DeleteCompany(int Id)
@@ -49,7 +51,7 @@ namespace MetalogixData
             {
                 var name = new SqlParameter("@Id", Id);
 
-                var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Id", Id).SingleOrDefault();
+                var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyDelete @Id", Id).SingleOrDefault();
             }
 
         }

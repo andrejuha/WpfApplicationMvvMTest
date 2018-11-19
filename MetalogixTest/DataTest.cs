@@ -14,5 +14,13 @@ namespace MetalogixTest
             execute.InsertCompany("testName", 100);
 
         }
+
+        [TestMethod]
+        public void TestStoredSelect()
+        {
+            ExecuteStored execute = new ExecuteStored();
+            execute.SelectCompany( 1);
+
+        }
     }
 }

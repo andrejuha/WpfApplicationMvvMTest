@@ -54,12 +54,12 @@
   <ItemGroup>
     <Compile Include="Context\Company.cs" />
     <Compile Include="Context\CompanyModel.cs" />
+    <Compile Include="Context\CompanyView.cs" />
     <Compile Include="Context\Company_Type.cs" />
     <Compile Include="Context\C__RefactorLog.cs" />
     <Compile Include="ExecuteStored.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagram.cs" />
-    <Compile Include="sysdiagrams.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

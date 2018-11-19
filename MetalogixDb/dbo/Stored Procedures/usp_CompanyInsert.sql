@@ -1,7 +1,7 @@
 ﻿CREATE PROC [dbo].[usp_CompanyInsert] 
    
     @Name nvarchar(50) = NULL,
-    @Country_Code char(2) = NULL
+    @Country_Code int = NULL
 AS 
 	SET NOCOUNT ON 
 	SET XACT_ABORT ON  
@@ -12,8 +12,8 @@ AS
 	SELECT  @Name, @Country_Code
 	
 	-- Begin Return Select <- do not remove
-	SELECT [Id], [Name], [Country_Code]
-	FROM   [dbo].[Company]
+	SELECT [Id], [Name], [Country_Code] ,[Company_Type],[Description]
+	FROM   [dbo].[CompanyView] 
 	WHERE  [Id] = SCOPE_IDENTITY()
 	-- End Return Select <- do not remove
                
