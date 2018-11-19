@@ -15,7 +15,6 @@ namespace MetalogixData
         public virtual DbSet<C__RefactorLog> C__RefactorLog { get; set; }
         public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<Company_Type> Company_Type { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<CompanyView> CompanyViews { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

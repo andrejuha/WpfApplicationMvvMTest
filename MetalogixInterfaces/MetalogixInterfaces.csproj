@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="CompanyItem.cs" />
     <Compile Include="CompanyTypeItem.cs" />
+    <Compile Include="ICompanyItem.cs" />
+    <Compile Include="ICompanyTypeItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

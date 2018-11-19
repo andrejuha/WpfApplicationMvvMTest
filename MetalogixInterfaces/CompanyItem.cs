@@ -1,6 +1,9 @@
-﻿namespace MetalogixDemoClient.Model
+﻿using System;
+using MetalogixDemoService;
+
+namespace MetalogixDemoClient.Model
 {
-    public class CompanyItem
+    public class CompanyItem//:ICompanyItem
     {
         public CompanyItem()
         {
@@ -24,8 +27,56 @@
 
         public CompanyTypeItem CompanyTypeItem { get; set; }
 
+        //int ICompanyItem.CompanyTypeEnum
+        //{
+        //    get
+        //    {
+        //        return (int)CompanyTypeEnum;
+        //    }
 
-}
+        //    set
+        //    {
+        //        CompanyTypeEnum=(CompanyTypeEnum)value;
+        //    }
+        //}
+
+        //ICompanyTypeItem ICompanyItem.CompanyTypeItem
+        //{
+        //    get
+        //    {
+        //        throw new NotImplementedException();
+        //    }
+
+        //    set
+        //    {
+        //        throw new NotImplementedException();
+        //    }
+        //}
+
+        //int ICompanyItem.ContryCode
+        //{
+        //    get
+        //    {
+        //        throw new NotImplementedException();
+        //    }
+        //}
+
+        //int ICompanyItem.Id
+        //{
+        //    get
+        //    {
+        //        throw new NotImplementedException();
+        //    }
+        //}
+
+        //string ICompanyItem.Name
+        //{
+        //    get
+        //    {
+        //        throw new NotImplementedException();
+        //    }
+        //}
+    }
 
 
 

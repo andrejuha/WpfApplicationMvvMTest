@@ -1,6 +1,8 @@
-﻿namespace MetalogixDemoClient.Model
+﻿using MetalogixDemoService;
+
+namespace MetalogixDemoClient.Model
 {
-    public class CompanyTypeItem
+    public class CompanyTypeItem:ICompanyTypeItem
     {
         public string Name { get; set; }
 
