@@ -55,6 +55,14 @@ namespace MetalogixDemoClient.ViewModel
             }
         }
 
+        public static MainViewModel GetMain
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MainViewModel>();
+            }
+        }
+
         /// <summary>
         /// Cleans up all the resources.
         /// </summary>

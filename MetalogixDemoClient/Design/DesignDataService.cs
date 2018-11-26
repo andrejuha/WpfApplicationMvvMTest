@@ -16,6 +16,11 @@ namespace MetalogixDemoClient.Design
         {
             throw new NotImplementedException();
         }
+        public Task<string> UpdateCompany(CompanyItem company)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public Task<CompanyItem> GetCompany(int Id, string companyName, string countryCode, string companyType)
         {
@@ -30,9 +35,16 @@ namespace MetalogixDemoClient.Design
             callback(item, null);
         }
 
-        public Task<string> UpdateCompany(CompanyItem company)
+        public CompanyTypeItem GetTypeData(int ID)
         {
             throw new NotImplementedException();
         }
+
+        public Task<IEnumerable<CompanyTypeItem>> GetAllTypeData()
+        {
+            throw new NotImplementedException();
+        }
+
+     
     }
 }

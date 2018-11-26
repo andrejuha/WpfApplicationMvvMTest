@@ -16,5 +16,13 @@ namespace MetalogixDemoClient
             InitializeComponent();
             Closing += (s, e) => ViewModelLocator.Cleanup();
         }
+
+        private void cbCompanyType_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+         ;
+            cbCompanyType.DataContext = ViewModelLocator.GetMain;
+         
+        }
     }
 }

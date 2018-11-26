@@ -71,6 +71,7 @@
     <Build Include="dbo\Stored Procedures\usp_CompanyDelete.sql" />
     <Build Include="dbo\Views\CompanyView.sql" />
     <Build Include="dbo\Stored Procedures\usp_CompanyViewSelect.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Company_TypeSelectAll.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="MetalogixDb.refactorlog" />

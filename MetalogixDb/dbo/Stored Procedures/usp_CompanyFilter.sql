@@ -1,7 +1,8 @@
 ﻿create PROC [dbo].[usp_CompanyFilter] 
     @Id int,
 	@Name [nvarchar](50),
-	@Country_Code [char](2) 
+	@Country_Code [char](2) ,
+	@
 AS 
 	SET NOCOUNT ON 
 	SET XACT_ABORT ON  

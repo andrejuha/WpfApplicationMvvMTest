@@ -17,7 +17,7 @@ namespace MetalogixDemoService
     {
         public Task<string> AddCompany(CompanyWcfItem company)
         {
-            ExecuteStored execute = new ExecuteStored();
+            ExecuteStoredCompany execute = new ExecuteStoredCompany();
             Company returnedCompany= execute.InsertCompany("testName", 100,(int) CompanyTypeEnum.Other);
             return Task.FromResult("inserted "+ returnedCompany.Id);
         }
@@ -32,6 +32,11 @@ namespace MetalogixDemoService
             throw new NotImplementedException();
         }
 
+        public Task<string> UpdateCompany(CompanyWcfItem company)
+        {
+            throw new NotImplementedException();
+        }
+
         public void GetData(Action<CompanyWcfItem, Exception> callback)
         {
             throw new NotImplementedException();
@@ -42,22 +47,29 @@ namespace MetalogixDemoService
             return string.Format("You entered: {0}", value);
         }
 
-        public CompanyWcfItem GetDataUsingDataContract(CompanyWcfItem composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            //if (composite.BoolValue)
-            //{
-            //    composite.StringValue += "Suffix";
-            //}
-            return composite;
-        }
-
-        public Task<string> UpdateCompany(CompanyWcfItem company)
+        public CompanyWcfTypeItem GetTypeData(int ID)
         {
             throw new NotImplementedException();
         }
+
+        public Task<IEnumerable<CompanyWcfTypeItem>> GetAllTypeData()
+        {
+            throw new NotImplementedException();
+        }
+
+        //public CompanyWcfItem GetDataUsingDataContract(CompanyWcfItem composite)
+        //{
+        //    if (composite == null)
+        //    {
+        //        throw new ArgumentNullException("composite");
+        //    }
+        //    //if (composite.BoolValue)
+        //    //{
+        //    //    composite.StringValue += "Suffix";
+        //    //}
+        //    return composite;
+        //}
+
+
     }
 }

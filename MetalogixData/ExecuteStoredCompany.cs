@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MetalogixData
 {
-    public class ExecuteStored
+    public class ExecuteStoredCompany
     {
         public Company InsertCompany(string Name,int CountryCode,int Company_Type)
         {
@@ -18,8 +18,8 @@ namespace MetalogixData
                 var name = new SqlParameter("@Name", Name);
                 var countryCode = new SqlParameter("@Country_Code", CountryCode);
                 var companyType = new SqlParameter("@Company_Type", Company_Type);
-               
-        companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Name, @Country_Code", name, countryCode).SingleOrDefault();
+            
+                companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Name, @Country_Code,@Company_Type", name, countryCode, companyType).SingleOrDefault();
             }
             return companies;
         }

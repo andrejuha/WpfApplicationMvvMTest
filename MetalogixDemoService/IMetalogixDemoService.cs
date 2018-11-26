@@ -28,7 +28,10 @@ namespace MetalogixDemoService
         string companyName,
         string countryCode,
         string companyType);
-
+        [OperationContract]
+        Task<IEnumerable<CompanyWcfTypeItem>> GetAllTypeData();
+        [OperationContract]
+        CompanyWcfTypeItem GetTypeData(int ID);
         // TODO: Add your service operations here
     }
 

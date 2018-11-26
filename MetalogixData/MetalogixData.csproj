@@ -57,7 +57,8 @@
     <Compile Include="Context\CompanyView.cs" />
     <Compile Include="Context\Company_Type.cs" />
     <Compile Include="Context\C__RefactorLog.cs" />
-    <Compile Include="ExecuteStored.cs" />
+    <Compile Include="ExecuteStoredCompanyType.cs" />
+    <Compile Include="ExecuteStoredCompany.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

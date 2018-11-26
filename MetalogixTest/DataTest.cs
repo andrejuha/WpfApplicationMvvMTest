@@ -9,19 +9,43 @@ namespace MetalogixTest
     public class DataTest
     {
         [TestMethod]
-        public void TestStoredInsert()
+        public void TestStoredInsertCompany()
         {
-            ExecuteStored execute=  new ExecuteStored();
+            ExecuteStoredCompany execute=  new ExecuteStoredCompany();
             execute.InsertCompany("testName", 100,(int)CompanyTypeEnum.Telco);
 
         }
 
         [TestMethod]
-        public void TestStoredSelect()
+        public void TestStoredSelectCompany()
         {
-            ExecuteStored execute = new ExecuteStored();
+            ExecuteStoredCompany execute = new ExecuteStoredCompany();
             execute.SelectCompany( 1);
 
         }
+        [TestMethod]
+        public void TestStoredSelectTypeAll()
+        {
+            ExecuteStoredCompanyType execute = new ExecuteStoredCompanyType();
+            execute.SelectTypeAll();
+
+        }
+        //[TestMethod]
+        //public void TestStoredSelectAll()
+        //{
+        //    ExecuteStoredCompany execute = new ExecuteStoredCompany();
+        //    execute.SelectCompany(1);
+
+        //}
+
+        //[TestMethod]
+        //public void TestStoredSelectType()
+        //{
+        //    ExecuteStoredCompany execute = new ExecuteStoredCompany();
+        //    execute.SelectCompany(1);
+
+        //}
+
+
     }
 }

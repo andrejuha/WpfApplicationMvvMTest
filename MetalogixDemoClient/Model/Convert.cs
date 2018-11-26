@@ -49,5 +49,7 @@ namespace MetalogixDemoClient.Model
             }
             return CompanyItemList.ToArray();
         }
+
+  
     }
 }

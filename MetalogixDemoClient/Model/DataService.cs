@@ -37,6 +37,8 @@ namespace MetalogixDemoClient.Model
             
         }
 
+      
+
         public Task<CompanyItem> GetCompany(int Id, string companyName, string countryCode, string companyType)
         {
             throw new NotImplementedException();
@@ -50,8 +52,24 @@ namespace MetalogixDemoClient.Model
             callback(item, null);
         }
 
+        public CompanyTypeItem GetTypeData(int ID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<CompanyTypeItem>> GetAllTypeData()
+        {
+            MetalogixWcfService.GetAllCompaniesRequest request = new MetalogixWcfService.GetAllCompaniesRequest();
+
+            //MetalogixWcfService.GetAllCompaniesResponse response = GmetalogixDemoServiceClient.(request);
+            //return Task.FromResult(response..ConvertCompanyItemToWcf());
+            return null;
+        }
+
+
         public Task<string> UpdateCompany(CompanyItem company)
         {
+
             throw new NotImplementedException();
         }
     }

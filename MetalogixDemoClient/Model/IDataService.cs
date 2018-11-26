@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,10 @@ namespace MetalogixDemoClient.Model
         Task<string> UpdateCompany(CompanyItem company);
 
         Task<string> AddCompany(CompanyItem company);
+
+        CompanyTypeItem GetTypeData(int ID);
+
+        Task<IEnumerable<CompanyTypeItem>> GetAllTypeData();
 
         //Task<string> DeleteCompany(CompanyItem company);
 

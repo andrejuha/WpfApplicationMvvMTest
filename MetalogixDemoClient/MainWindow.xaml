@@ -33,7 +33,12 @@
         <Label x:Name="label" Content="Company Identificator:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Margin="41,90,0,0" RenderTransformOrigin="-2.208,3.993"/>
         <TextBox x:Name="txtCompanyId_Copy" Height="23" TextWrapping="Wrap" Text="Enter Text" RenderTransformOrigin="0.582,6.557" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="507,94,0,0" Width="189"/>
         <Label x:Name="label_Copy" Content="Country Code:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Margin="397,90,0,0" RenderTransformOrigin="-2.208,3.993"/>
-        <ComboBox x:Name="cbCompanyType" HorizontalAlignment="Left" Margin="576,122,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox 
+          x:Name="cbCompanyType" HorizontalAlignment="Left" Margin="576,122,0,0" VerticalAlignment="Top" Width="120" 
+          DisplayMemberPath="Name" 
+          SelectedValuePath="Name" 
+          ItemsSource="{Binding comboData}" 
+         />
         <Label x:Name="label_Copy1" Content="Company Type:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Margin="397,115,0,0" RenderTransformOrigin="-2.208,3.993"/>
         <Button x:Name="btnFind" Content="Find" HorizontalAlignment="Left" Margin="589,163,0,0" VerticalAlignment="Top" Width="75"/>
 
