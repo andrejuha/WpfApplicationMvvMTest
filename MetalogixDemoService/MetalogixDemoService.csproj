@@ -102,6 +102,10 @@
       <Project>{93f94436-c398-42d4-95b5-17ce0ab8729e}</Project>
       <Name>MetalogixDb</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MetalogixInterfaces\MetalogixInterfaces.csproj">
+      <Project>{0703166F-E83F-4158-9052-652D97B6A436}</Project>
+      <Name>MetalogixInterfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

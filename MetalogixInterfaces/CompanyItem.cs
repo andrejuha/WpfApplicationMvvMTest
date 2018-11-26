@@ -82,10 +82,10 @@ namespace MetalogixDemoClient.Model
 
     public enum CompanyTypeEnum
     {
-        Industry,
-        Navy,
-        Telco,
-        Other
+        Industry=0,
+        Navy=1,
+        Telco=2,
+        Other=3
 
 
     }

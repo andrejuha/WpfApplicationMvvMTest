@@ -54,18 +54,29 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
     <Compile Include="DataTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MetalogixData\MetalogixData.csproj">
       <Project>{00efa5ef-7a8f-43fe-ad64-b6f480b17102}</Project>
       <Name>MetalogixData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetalogixDemoClient\MetalogixDemoClient.csproj">
+      <Project>{007e3050-dfe9-4dbb-8ef3-1ea046d86636}</Project>
+      <Name>MetalogixDemoClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetalogixDemoService\MetalogixDemoService.csproj">
+      <Project>{ebb1bf55-8f3d-43f6-82be-a92620cf8018}</Project>
+      <Name>MetalogixDemoService</Name>
     </ProjectReference>
     <ProjectReference Include="..\MetalogixInterfaces\MetalogixInterfaces.csproj">
       <Project>{0703166f-e83f-4158-9052-652d97b6a436}</Project>

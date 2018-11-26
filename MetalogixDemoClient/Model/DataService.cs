@@ -8,10 +8,10 @@ namespace MetalogixDemoClient.Model
     {
         MetalogixDemoClient.MetalogixWcfService.MetalogixDemoServiceClient GmetalogixDemoServiceClient;
 
-        public DataService(MetalogixDemoClient.MetalogixWcfService.IMetalogixDemoService MetalogixDemoService)
-        {
-            //GmetalogixDemoServiceClient = MetalogixDemoService;
-        }
+        //public DataService(MetalogixDemoClient.MetalogixWcfService.IMetalogixDemoService MetalogixDemoService)
+        //{
+        //    GmetalogixDemoServiceClient = MetalogixDemoService;
+        //}
         public DataService()
         {
             GmetalogixDemoServiceClient = new MetalogixWcfService.MetalogixDemoServiceClient();

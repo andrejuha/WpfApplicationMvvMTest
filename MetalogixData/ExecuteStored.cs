@@ -10,16 +10,18 @@ namespace MetalogixData
 {
     public class ExecuteStored
     {
-        public void InsertCompany(string Name,int CountryCode)
+        public Company InsertCompany(string Name,int CountryCode,int Company_Type)
         {
+            Company companies;
             using (var db = new CompanyModel( ))
             {
                 var name = new SqlParameter("@Name", Name);
                 var countryCode = new SqlParameter("@Country_Code", CountryCode);
-
-                var companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Name, @Country_Code", name, countryCode).SingleOrDefault();
+                var companyType = new SqlParameter("@Company_Type", Company_Type);
+               
+        companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Name, @Country_Code", name, countryCode).SingleOrDefault();
             }
-
+            return companies;
         }
         public void UpdateCompany(CompanyItem company)
         {

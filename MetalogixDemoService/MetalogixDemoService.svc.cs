@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MetalogixData;
+using MetalogixDemoClient.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -15,7 +17,9 @@ namespace MetalogixDemoService
     {
         public Task<string> AddCompany(CompanyWcfItem company)
         {
-            throw new NotImplementedException();
+            ExecuteStored execute = new ExecuteStored();
+            Company returnedCompany= execute.InsertCompany("testName", 100,(int) CompanyTypeEnum.Other);
+            return Task.FromResult("inserted "+ returnedCompany.Id);
         }
 
         public Task<IEnumerable<CompanyWcfItem>> GetAllCompanies()

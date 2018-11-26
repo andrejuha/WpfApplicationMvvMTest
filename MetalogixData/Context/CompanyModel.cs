@@ -19,8 +19,8 @@ namespace MetalogixData
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Company_Type>()
-            //    .HasMany(e => e.Companies);
+            modelBuilder.Entity<Company_Type>()
+                .HasMany(e => e.Companies);
             //    //.WithOptional(e => e.Company_Type1)
             //    //.HasForeignKey(e => e.Company_Type);
         }

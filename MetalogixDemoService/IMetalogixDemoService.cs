@@ -37,6 +37,7 @@ namespace MetalogixDemoService
     [DataContract]
     public class CompanyWcfItem
     {
+        public CompanyWcfItem() { }
         public CompanyWcfItem(int ID, string Name, int CountryCode, int CompanyType)
         {
             this.Id = ID;
@@ -45,11 +46,11 @@ namespace MetalogixDemoService
             this.CompanyTypeEnum = CompanyType;
         }
         [DataMember]
-        public int Id { get; private set; }
+        public int Id { get;  set; }
         [DataMember]
-        public string Name { get; private set; }
+        public string Name { get;  set; }
         [DataMember]
-        public int ContryCode { get; private set; }
+        public int ContryCode { get;  set; }
         [DataMember]
         public int CompanyTypeEnum { get; set; }
         [DataMember]
