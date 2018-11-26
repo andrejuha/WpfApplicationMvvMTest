@@ -144,10 +144,16 @@
     <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.GetAllCompaniesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.GetAllTypeDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.GetCompanyResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.GetDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.GetTypeDataResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\MetalogixWcfService\MetalogixDemoClient.MetalogixWcfService.UpdateCompanyResponse.datasource">

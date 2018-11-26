@@ -38,6 +38,18 @@
   <wsdl:message name="IMetalogixDemoService_GetCompany_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCompanyResponse" />
   </wsdl:message>
+  <wsdl:message name="IMetalogixDemoService_GetAllTypeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTypeData" />
+  </wsdl:message>
+  <wsdl:message name="IMetalogixDemoService_GetAllTypeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTypeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMetalogixDemoService_GetTypeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeData" />
+  </wsdl:message>
+  <wsdl:message name="IMetalogixDemoService_GetTypeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTypeDataResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMetalogixDemoService">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IMetalogixDemoService/GetData" message="tns:IMetalogixDemoService_GetData_InputMessage" />
@@ -58,6 +70,14 @@
     <wsdl:operation name="GetCompany">
       <wsdl:input wsaw:Action="http://tempuri.org/IMetalogixDemoService/GetCompany" message="tns:IMetalogixDemoService_GetCompany_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMetalogixDemoService/GetCompanyResponse" message="tns:IMetalogixDemoService_GetCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTypeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetalogixDemoService/GetAllTypeData" message="tns:IMetalogixDemoService_GetAllTypeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetalogixDemoService/GetAllTypeDataResponse" message="tns:IMetalogixDemoService_GetAllTypeData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMetalogixDemoService/GetTypeData" message="tns:IMetalogixDemoService_GetTypeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMetalogixDemoService/GetTypeDataResponse" message="tns:IMetalogixDemoService_GetTypeData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMetalogixDemoService" type="tns:IMetalogixDemoService">
@@ -100,6 +120,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetCompany">
       <soap:operation soapAction="http://tempuri.org/IMetalogixDemoService/GetCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTypeData">
+      <soap:operation soapAction="http://tempuri.org/IMetalogixDemoService/GetAllTypeData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTypeData">
+      <soap:operation soapAction="http://tempuri.org/IMetalogixDemoService/GetTypeData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

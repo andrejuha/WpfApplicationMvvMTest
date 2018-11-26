@@ -23,4 +23,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CompanyWcfTypeItem" nillable="true" type="tns:CompanyWcfTypeItem" />
+  <xs:complexType name="ArrayOfCompanyWcfTypeItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyWcfTypeItem" nillable="true" type="tns:CompanyWcfTypeItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyWcfTypeItem" nillable="true" type="tns:ArrayOfCompanyWcfTypeItem" />
 </xs:schema>

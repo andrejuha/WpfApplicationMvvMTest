@@ -216,6 +216,18 @@ namespace MetalogixDemoClient.MetalogixWcfService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMetalogixDemoService/GetCompany", ReplyAction="http://tempuri.org/IMetalogixDemoService/GetCompanyResponse")]
         System.Threading.Tasks.Task<MetalogixDemoClient.MetalogixWcfService.GetCompanyResponse> GetCompanyAsync(MetalogixDemoClient.MetalogixWcfService.GetCompanyRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMetalogixDemoService/GetAllTypeData", ReplyAction="http://tempuri.org/IMetalogixDemoService/GetAllTypeDataResponse")]
+        MetalogixDemoClient.MetalogixWcfService.GetAllTypeDataResponse GetAllTypeData(MetalogixDemoClient.MetalogixWcfService.GetAllTypeDataRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMetalogixDemoService/GetAllTypeData", ReplyAction="http://tempuri.org/IMetalogixDemoService/GetAllTypeDataResponse")]
+        System.Threading.Tasks.Task<MetalogixDemoClient.MetalogixWcfService.GetAllTypeDataResponse> GetAllTypeDataAsync(MetalogixDemoClient.MetalogixWcfService.GetAllTypeDataRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMetalogixDemoService/GetTypeData", ReplyAction="http://tempuri.org/IMetalogixDemoService/GetTypeDataResponse")]
+        MetalogixDemoClient.MetalogixWcfService.GetTypeDataResponse GetTypeData(MetalogixDemoClient.MetalogixWcfService.GetTypeDataRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMetalogixDemoService/GetTypeData", ReplyAction="http://tempuri.org/IMetalogixDemoService/GetTypeDataResponse")]
+        System.Threading.Tasks.Task<MetalogixDemoClient.MetalogixWcfService.GetTypeDataResponse> GetTypeDataAsync(MetalogixDemoClient.MetalogixWcfService.GetTypeDataRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -376,6 +388,63 @@ namespace MetalogixDemoClient.MetalogixWcfService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllTypeData", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetAllTypeDataRequest {
+        
+        public GetAllTypeDataRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllTypeDataResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetAllTypeDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public MetalogixDemoClient.MetalogixWcfService.CompanyWcfTypeItem[] GetAllTypeDataResult;
+        
+        public GetAllTypeDataResponse() {
+        }
+        
+        public GetAllTypeDataResponse(MetalogixDemoClient.MetalogixWcfService.CompanyWcfTypeItem[] GetAllTypeDataResult) {
+            this.GetAllTypeDataResult = GetAllTypeDataResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTypeData", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetTypeDataRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int ID;
+        
+        public GetTypeDataRequest() {
+        }
+        
+        public GetTypeDataRequest(int ID) {
+            this.ID = ID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetTypeDataResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetTypeDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public MetalogixDemoClient.MetalogixWcfService.CompanyWcfTypeItem GetTypeDataResult;
+        
+        public GetTypeDataResponse() {
+        }
+        
+        public GetTypeDataResponse(MetalogixDemoClient.MetalogixWcfService.CompanyWcfTypeItem GetTypeDataResult) {
+            this.GetTypeDataResult = GetTypeDataResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IMetalogixDemoServiceChannel : MetalogixDemoClient.MetalogixWcfService.IMetalogixDemoService, System.ServiceModel.IClientChannel {
     }
@@ -441,6 +510,22 @@ namespace MetalogixDemoClient.MetalogixWcfService {
         
         public System.Threading.Tasks.Task<MetalogixDemoClient.MetalogixWcfService.GetCompanyResponse> GetCompanyAsync(MetalogixDemoClient.MetalogixWcfService.GetCompanyRequest request) {
             return base.Channel.GetCompanyAsync(request);
+        }
+        
+        public MetalogixDemoClient.MetalogixWcfService.GetAllTypeDataResponse GetAllTypeData(MetalogixDemoClient.MetalogixWcfService.GetAllTypeDataRequest request) {
+            return base.Channel.GetAllTypeData(request);
+        }
+        
+        public System.Threading.Tasks.Task<MetalogixDemoClient.MetalogixWcfService.GetAllTypeDataResponse> GetAllTypeDataAsync(MetalogixDemoClient.MetalogixWcfService.GetAllTypeDataRequest request) {
+            return base.Channel.GetAllTypeDataAsync(request);
+        }
+        
+        public MetalogixDemoClient.MetalogixWcfService.GetTypeDataResponse GetTypeData(MetalogixDemoClient.MetalogixWcfService.GetTypeDataRequest request) {
+            return base.Channel.GetTypeData(request);
+        }
+        
+        public System.Threading.Tasks.Task<MetalogixDemoClient.MetalogixWcfService.GetTypeDataResponse> GetTypeDataAsync(MetalogixDemoClient.MetalogixWcfService.GetTypeDataRequest request) {
+            return base.Channel.GetTypeDataAsync(request);
         }
     }
 }

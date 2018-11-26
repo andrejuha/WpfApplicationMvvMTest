@@ -57,13 +57,12 @@ namespace MetalogixDemoClient.Model
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<CompanyTypeItem>> GetAllTypeData()
+        public async Task<IEnumerable<CompanyTypeItem>> GetAllTypeData()
         {
-            MetalogixWcfService.GetAllCompaniesRequest request = new MetalogixWcfService.GetAllCompaniesRequest();
+            MetalogixWcfService.GetAllTypeDataRequest request = new MetalogixWcfService.GetAllTypeDataRequest();
 
-            //MetalogixWcfService.GetAllCompaniesResponse response = GmetalogixDemoServiceClient.(request);
-            //return Task.FromResult(response..ConvertCompanyItemToWcf());
-            return null;
+            MetalogixWcfService.GetAllTypeDataResponse response =await GmetalogixDemoServiceClient.GetAllTypeDataAsync(request);
+            return response.GetAllTypeDataResult.ConvertCompanyWcfTypeItemsToData();
         }
 
 

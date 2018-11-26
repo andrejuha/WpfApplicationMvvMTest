@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalogixTest", "MetalogixT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{6ED98DCA-53BF-4E64-B789-562DB5D96A77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalogixWpfClientTest", "MetalogixWpfClientTest\MetalogixWpfClientTest.csproj", "{D3B6FA3B-1710-4B1A-B1E3-6227EA7C0F70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,11 +52,16 @@ Global
 		{B120CA55-2E43-496C-93B5-E448B0D13A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B120CA55-2E43-496C-93B5-E448B0D13A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B120CA55-2E43-496C-93B5-E448B0D13A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B6FA3B-1710-4B1A-B1E3-6227EA7C0F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B6FA3B-1710-4B1A-B1E3-6227EA7C0F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B6FA3B-1710-4B1A-B1E3-6227EA7C0F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B6FA3B-1710-4B1A-B1E3-6227EA7C0F70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B120CA55-2E43-496C-93B5-E448B0D13A96} = {6ED98DCA-53BF-4E64-B789-562DB5D96A77}
+		{D3B6FA3B-1710-4B1A-B1E3-6227EA7C0F70} = {6ED98DCA-53BF-4E64-B789-562DB5D96A77}
 	EndGlobalSection
 EndGlobal
