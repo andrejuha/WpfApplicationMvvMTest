@@ -20,9 +20,15 @@ namespace MetalogixDemoClient
         private void cbCompanyType_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
 
-         ;
-            cbCompanyType.DataContext = ViewModelLocator.GetMain;
+         //;
+         //   cbCompanyType.DataContext = ViewModelLocator.GetMain;
          
+        }
+
+        private void btnFind_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = (MainViewModel)DataContext;
+            vm.ShowDetailsCommand.Execute(txtCompanyId.Text+"|"+txtCountryCode.Text);
         }
     }
 }

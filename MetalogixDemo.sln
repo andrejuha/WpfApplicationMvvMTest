@@ -21,6 +21,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{6ED98DCA-53BF-4E64-B789-562DB5D96A77}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalogixWpfClientTest", "MetalogixWpfClientTest\MetalogixWpfClientTest.csproj", "{D3B6FA3B-1710-4B1A-B1E3-6227EA7C0F70}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EBB1BF55-8F3D-43F6-82BE-A92620CF8018} = {EBB1BF55-8F3D-43F6-82BE-A92620CF8018}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

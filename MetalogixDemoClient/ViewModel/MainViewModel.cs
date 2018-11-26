@@ -1,6 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using MetalogixDemoClient.Model;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Threading.Tasks;
@@ -25,8 +26,10 @@ namespace MetalogixDemoClient.ViewModel
                 if (_combodata == null)
                     _combodata = new ObservableCollection<CompanyTypeItem>();
                 //else
-                //    RefreshCommand();
+                //    RefreshComboCommand();
                 _combodata.Add(new CompanyTypeItem() { Name = "sss", Description = "ddd" });
+                
+
                 return _combodata;
             }
             set
@@ -36,18 +39,56 @@ namespace MetalogixDemoClient.ViewModel
             }
         }
 
-
-        private RelayCommand _refreshCommand;
-
-        public RelayCommand RefreshCommand
+        private ObservableCollection<CompanyItem> _companyItemData;
+        public ObservableCollection<CompanyItem> CompanyItemData
         {
             get
             {
-                return _refreshCommand
-                    ?? (_refreshCommand = new RelayCommand(
+                if (_companyItemData == null)
+                    _companyItemData = new ObservableCollection<CompanyItem>();
+                //else
+                //    RefreshComboCommand();
+                _companyItemData.Add(new CompanyItem() { Name = "testcompany", CompanyTypeEnum= CompanyTypeEnum.Industry, ContryCode=100, Id=1 });
+
+
+                return _companyItemData;
+            }
+            set
+            {
+                if (value != _companyItemData)
+                    _companyItemData = value;
+            }
+        }
+
+
+        private RelayCommand _refreshComboCommand;
+
+        public RelayCommand RefreshComboCommand
+        {
+            get
+            {
+                return _refreshComboCommand
+                    ?? (_refreshComboCommand = new RelayCommand(
                                           async () =>
                                           {
                                               await GetAllType();
+                                          }));
+            }
+        }
+
+         private RelayCommand<IEnumerable<CompanyItem> >_showDetailsCommand;
+
+        public RelayCommand<IEnumerable<CompanyItem>> ShowDetailsCommand
+        {
+            get
+            {
+                return _showDetailsCommand
+                    ?? (_showDetailsCommand = new RelayCommand<IEnumerable<CompanyItem>>(
+                                          friend =>
+                                          {
+                                              //SelectedFriend = friend;
+                                              //_navigationService.NavigateTo(
+                                              //    new Uri("/DetailsPage.xaml", UriKind.Relative));
                                           }));
             }
         }
