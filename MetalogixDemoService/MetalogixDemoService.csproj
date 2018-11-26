@@ -74,7 +74,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompanyTypeItem.cs" />
+    <Compile Include="CompanyWcfTypeItem.cs" />
+    <Compile Include="Convert.cs" />
     <Compile Include="MetalogixDemoService.svc.cs">
       <DependentUpon>MetalogixDemoService.svc</DependentUpon>
     </Compile>

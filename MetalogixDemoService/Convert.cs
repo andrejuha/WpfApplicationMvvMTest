@@ -1,11 +1,12 @@
-﻿using MetalogixDemoClient.MetalogixWcfService;
+﻿
+using MetalogixDemoClient.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MetalogixDemoClient.Model
+namespace MetalogixDemoService
 {
     public static class Convert
     {

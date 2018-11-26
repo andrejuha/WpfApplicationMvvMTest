@@ -39,12 +39,12 @@ namespace MetalogixData
 
         }
        
-        public List<CompanyTypeItem>  SelectTypeAll()
+        public async Task<IEnumerable<CompanyTypeItem>>  SelectTypeAll()
         {
           List<CompanyTypeItem> companyTypes=null;
             using (var db = new CompanyModel())
             {
-                 companyTypes = db.Database.SqlQuery<CompanyTypeItem>("usp_Company_TypeSelectAll").ToList();
+                 companyTypes =await db.Database.SqlQuery<CompanyTypeItem>("usp_Company_TypeSelectAll").ToListAsync();
             }
             return companyTypes;
         }

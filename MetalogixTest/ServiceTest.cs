@@ -53,5 +53,12 @@ namespace MetalogixTest
             MetalogixDemoService. CompanyWcfItem company = new MetalogixDemoService.CompanyWcfItem() { Name="sss", CompanyTypeEnum= (int)CompanyTypeEnum.Industry, ContryCode=1  };
            await testContextInstance.AddCompany(company);
         }
+
+
+        [TestMethod]
+        public async Task TestServiceSelectAllCompanyType()
+        {
+            await testContextInstance.GetAllTypeData();
+        }
     }
 }
