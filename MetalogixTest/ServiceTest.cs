@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MetalogixDemoClient.MetalogixWcfService;
 using MetalogixDemoClient.Model;
+using System.Threading.Tasks;
 
 namespace MetalogixTest
 {
@@ -47,10 +48,10 @@ namespace MetalogixTest
         #endregion
 
         [TestMethod]
-        public void TestServiceAddCompany()
+        public async Task TestServiceAddCompany()
         {
             MetalogixDemoService. CompanyWcfItem company = new MetalogixDemoService.CompanyWcfItem() { Name="sss", CompanyTypeEnum= (int)CompanyTypeEnum.Industry, ContryCode=1  };
-           testContextInstance.AddCompany(company).RunSynchronously();
+           await testContextInstance.AddCompany(company);
         }
     }
 }

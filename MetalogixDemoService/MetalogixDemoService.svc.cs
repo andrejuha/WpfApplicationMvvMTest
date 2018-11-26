@@ -15,11 +15,11 @@ namespace MetalogixDemoService
     // NOTE: In order to launch WCF Test Client for testing this service, please select MetalogixDemoService.svc or MetalogixDemoService.svc.cs at the Solution Explorer and start debugging.
     public class MetalogixDemoService : IMetalogixDemoService
     {
-        public Task<string> AddCompany(CompanyWcfItem company)
+        public async Task<string> AddCompany(CompanyWcfItem company)
         {
             ExecuteStoredCompany execute = new ExecuteStoredCompany();
-            Company returnedCompany= execute.InsertCompany("testName", 100,(int) CompanyTypeEnum.Other);
-            return Task.FromResult("inserted "+ returnedCompany.Id);
+            Company returnedCompany= await execute.InsertCompany("testName", 100,(int) CompanyTypeEnum.Other);
+            return ("inserted "+ returnedCompany.Id);
         }
 
         public Task<IEnumerable<CompanyWcfItem>> GetAllCompanies()

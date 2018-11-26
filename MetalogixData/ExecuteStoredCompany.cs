@@ -6,11 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MetalogixData
 {
     public class ExecuteStoredCompany
     {
-        public Company InsertCompany(string Name,int CountryCode,int Company_Type)
+        public async Task<Company> InsertCompany(string Name,int CountryCode,int Company_Type)
         {
             Company companies;
             using (var db = new CompanyModel( ))
@@ -19,7 +20,7 @@ namespace MetalogixData
                 var countryCode = new SqlParameter("@Country_Code", CountryCode);
                 var companyType = new SqlParameter("@Company_Type", Company_Type);
             
-                companies = db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Name, @Country_Code,@Company_Type", name, countryCode, companyType).SingleOrDefault();
+                companies =await db.Database.SqlQuery<Company>("dbo.usp_CompanyInsert @Name, @Country_Code,@Company_Type", name, countryCode, companyType).SingleOrDefaultAsync();
             }
             return companies;
         }
