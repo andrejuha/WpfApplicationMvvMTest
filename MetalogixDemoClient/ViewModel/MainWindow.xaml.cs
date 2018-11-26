@@ -30,5 +30,17 @@ namespace MetalogixDemoClient
             var vm = (MainViewModel)DataContext;
             vm.ShowDetailsCommand.Execute(txtCompanyId.Text+"|"+txtCountryCode.Text);
         }
+
+        private void txtCompanyId_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            //if (txtCompanyId.Text == "Enter Text")
+            //    txtCompanyId.Text = "";
+        }
+
+        private void txtCompanyId_TextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            //if (txtCompanyId.Text == "Enter Text")
+            //    txtCompanyId.Text = "";
+        }
     }
 }
