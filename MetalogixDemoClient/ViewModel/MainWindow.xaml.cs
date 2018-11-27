@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using MetalogixDemoClient.ViewModel;
+using MetalogixDemoClient.Model;
 
 namespace MetalogixDemoClient
 {
@@ -27,8 +28,15 @@ namespace MetalogixDemoClient
 
         private void btnFind_Click(object sender, RoutedEventArgs e)
         {
+            int companyIdInt;
+            int countryCodeInt;
             var vm = (MainViewModel)DataContext;
-            vm.ShowDetailsCommand.Execute(txtCompanyId.Text+"|"+txtCountryCode.Text);
+
+           
+            int.TryParse(txtCompanyId.Text,out companyIdInt);
+            int.TryParse(txtCompanyId.Text, out countryCodeInt);
+            FindParams findParams = new FindParams() { CompanyId = companyIdInt, CountryCode = countryCodeInt };
+            vm.FindCompanyCommand.Execute(findParams);
         }
 
         private void txtCompanyId_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)

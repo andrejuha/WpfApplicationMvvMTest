@@ -23,9 +23,11 @@ namespace MetalogixDemoService
             return ("inserted "+ returnedCompany.Id);
         }
 
-        public Task<IEnumerable<CompanyWcfItem>> GetAllCompanies()
+        public async Task<IEnumerable<CompanyWcfItem>> GetAllCompanies()
         {
-            throw new NotImplementedException();
+            ExecuteStoredCompany execute = new ExecuteStoredCompany();
+            CompanyView returnedCompany =await  execute.SelectCompanyAll();
+            return null;
         }
 
         public Task<CompanyWcfItem> GetCompany(int Id, string companyName, string countryCode, string companyType)

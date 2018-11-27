@@ -76,19 +76,17 @@ namespace MetalogixDemoClient.ViewModel
             }
         }
 
-         private RelayCommand<IEnumerable<CompanyItem> >_showDetailsCommand;
+         private RelayCommand<FindParams> _findCompanyCommand;
 
-        public RelayCommand<IEnumerable<CompanyItem>> ShowDetailsCommand
+        public RelayCommand<FindParams> FindCompanyCommand
         {
             get
             {
-                return _showDetailsCommand
-                    ?? (_showDetailsCommand = new RelayCommand<IEnumerable<CompanyItem>>(
-                                          friend =>
+                return _findCompanyCommand
+                    ?? (_findCompanyCommand = new RelayCommand<FindParams>(
+                                          async fparams =>
                                           {
-                                              //SelectedFriend = friend;
-                                              //_navigationService.NavigateTo(
-                                              //    new Uri("/DetailsPage.xaml", UriKind.Relative));
+                                              await GetAllCompanies(); ;
                                           }));
             }
         }
@@ -102,6 +100,18 @@ namespace MetalogixDemoClient.ViewModel
             foreach (var friend in friends)
             {
                 comboData.Add(friend);
+            }
+        }
+
+        private async Task GetAllCompanies()
+        {
+            _combodata.Clear();
+
+            var friends = await _dataService.GetAllCompanies();
+
+            foreach (var friend in friends)
+            {
+                _companyItemData.Add(friend);
             }
         }
 

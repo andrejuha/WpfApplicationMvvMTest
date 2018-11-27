@@ -48,6 +48,21 @@ namespace MetalogixData
             return companies;
         }
 
+        public async Task<CompanyView> SelectCompanyAll()
+        {
+            CompanyView companies;
+            using (var db = new CompanyModel())
+            {
+                var paramId = new SqlParameter("@Id", DBNull.Value);
+                var paramName = new SqlParameter("@Name", DBNull.Value);
+                var paramCountryCode = new SqlParameter("@Country_Code", DBNull.Value);
+                var paramCompanyType = new SqlParameter("@Company_Type", DBNull.Value);
+                companies = await db.Database.SqlQuery<CompanyView>("usp_CompanyViewSelect @Id, @Name, @Country_Code, @Company_Type", paramId, paramName, paramCountryCode, paramCompanyType).SingleOrDefaultAsync();
+
+            }
+            return companies;
+        }
+
         public void DeleteCompany(int Id)
         {
             using (var db = new CompanyModel())

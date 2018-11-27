@@ -29,9 +29,9 @@
                    TextWrapping="Wrap" />
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="41,38,0,0" TextWrapping="Wrap" Text="Company filter" VerticalAlignment="Top" Width="120"/>
         <DataGrid x:Name="dgCompanyData" HorizontalAlignment="Left" Height="168" Margin="41,220,0,0" VerticalAlignment="Top" Width="701" ItemsSource="{Binding CompanyItemData}"/>
-        <TextBox x:Name="txtCompanyId" Height="23" TextWrapping="Wrap" Text="Enter Text" RenderTransformOrigin="0.582,6.557" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="194,96,0,0" Width="189" TextChanged="txtCompanyId_TextChanged" TextInput="txtCompanyId_TextInput"/>
+        <TextBox  x:Name="txtCompanyId" Height="23" TextWrapping="Wrap" Text="{Binding Path=CompanyIdInput,Mode=TwoWay}" RenderTransformOrigin="0.582,6.557" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="194,96,0,0" Width="189" TextChanged="txtCompanyId_TextChanged" TextInput="txtCompanyId_TextInput" />
         <Label x:Name="lblCompanyId" Content="Company Identificator:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Margin="41,90,0,0" RenderTransformOrigin="-2.208,3.993"/>
-        <TextBox x:Name="txtCountryCode" Height="23" TextWrapping="Wrap" Text="Enter Text" RenderTransformOrigin="0.582,6.557" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="507,94,0,0" Width="189"/>
+        <TextBox x:Name="txtCountryCode" Height="23" TextWrapping="Wrap" Text="{Binding Path= CountryCodeInput,Mode=TwoWay}" RenderTransformOrigin="0.582,6.557" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="507,94,0,0" Width="189"/>
         <Label x:Name="lblCountryCode" Content="Country Code:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Margin="397,90,0,0" RenderTransformOrigin="-2.208,3.993"/>
         <ComboBox 
           x:Name="cbCompanyType" HorizontalAlignment="Left" Margin="576,122,0,0" VerticalAlignment="Top" Width="120" 

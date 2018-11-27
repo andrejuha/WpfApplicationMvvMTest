@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MetalogixData;
 using MetalogixDemoClient.Model;
+using System.Threading.Tasks;
 
 namespace MetalogixTest
 {
@@ -9,10 +10,10 @@ namespace MetalogixTest
     public class DataTest
     {
         [TestMethod]
-        public void TestStoredInsertCompany()
+        public async Task  TestStoredInsertCompany()
         {
             ExecuteStoredCompany execute=  new ExecuteStoredCompany();
-            execute.InsertCompany("testName", 100,(int)CompanyTypeEnum.Telco);
+          await  execute.InsertCompany("testName", 100,(int)CompanyTypeEnum.Telco);
 
         }
 
@@ -24,10 +25,10 @@ namespace MetalogixTest
 
         }
         [TestMethod]
-        public void TestStoredSelectTypeAll()
+        public async Task TestStoredSelectTypeAll()
         {
             ExecuteStoredCompanyType execute = new ExecuteStoredCompanyType();
-            execute.SelectTypeAll();
+           await execute.SelectTypeAll();
 
         }
         //[TestMethod]

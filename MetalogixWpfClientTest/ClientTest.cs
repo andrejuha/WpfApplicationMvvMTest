@@ -18,10 +18,11 @@ namespace MetalogixWpfClientTest
             _dataService = new DataService();
         }
         [TestMethod]
-        public void ShowDetailsCommandTest()
+        public void FindCompanyTest()
         {
             MainViewModel mvm= new MainViewModel(_dataService);
-            mvm.ShowDetailsCommand.Execute(3+ "|" + 100);
+            FindParams findParams = new FindParams() { CompanyId = 1, CountryCode = 100 };
+            mvm.FindCompanyCommand.Execute(findParams);
         }
     }
 }

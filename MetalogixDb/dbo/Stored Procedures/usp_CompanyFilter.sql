@@ -36,4 +36,7 @@ AS
 		WHERE   ( [Company_Type] = @Company_Type )
 	END
 
+		SELECT [Id],[Company_Type],[Country_Code],[Name],[Description],[TypeName]
+		FROM [dbo].[CompanyView]
+
 	COMMIT
